@@ -13,7 +13,7 @@
             var inputs = document.querySelectorAll('#musicName, #musicStyle, #artistName');
             inputs.forEach(function(input) {
                 input.addEventListener('input', function() {
-                    this.value = this.value.replace(/[^A-Za-z0-9_]/g, '');
+                    this.value = this.value.replace(/[^A-Za-z0-9_ ]/g, '');
                 });
             });
         });
