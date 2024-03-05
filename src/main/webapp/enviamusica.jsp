@@ -8,8 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var inputs = document.querySelectorAll('#musicName, #musicStyle, #artistName');
+            inputs.forEach(function(input) {
+                input.addEventListener('input', function() {
+                    this.value = this.value.replace(/[^A-Za-z0-9_]/g, '');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
+
 
 <!-- Navbar (similar ao index.jsp, mas pode remover o formulário de login) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
